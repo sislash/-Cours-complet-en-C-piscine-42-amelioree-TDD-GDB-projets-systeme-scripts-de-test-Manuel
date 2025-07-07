@@ -170,7 +170,8 @@ l'organisation.
 - Makefile (à la racine) : Pour compiler tous les exercices.
 
 📑 Table des matières
-📘 Piscine Boostée – Bloc 1 [🟢 Facile]
+
+##📘 Piscine Boostée – Bloc 1 [🟢 Facile]
 Partie 1/5 : Affichage & Premiers concepts
 0.0.0) ft_putchar
 0.0.1) ft_print_alphabet
@@ -181,6 +182,7 @@ Partie 1/5 : Affichage & Premiers concepts
 0.0.6) ft_print_comb2
 0.0.7) ft_putnbr
 0.0.8) ft_print_combn
+(Module 1 — preprocessor/ — Fondamentaux du Préprocesseur C)
 0.0.9) ft_ultimate_ft
 Partie 2/5 : Pointeurs & chaînes
 0.0.10) ft_swap
@@ -212,8 +214,9 @@ Partie 4/5 : Récursivité & Mathématiques
 0.1.6) ft_is_prime
 0.1.7) ft_find_next_prime
 Partie 5/5 : Bilan
-📋 Ce que tu as appris dans la Piscine
-📦 Bloc 2 — Libft++ Boostée [🟢 Facile]
+Ce que tu as appris dans la Piscine
+
+##📦 Bloc 2 — Libft++ Boostée [🟢 Facile]
 Partie 1/7 : Fonctions de base
 1.0) ft_strlen
 1.1) ft_strcpy
@@ -264,7 +267,7 @@ Partie 8 : Bonus pro
 8.1) TDD Complet
 8.2) Automatiser les tests
 
-🔄 Bloc 3 — GNL++ Boostée [🟡 Intermédiaire]
+##🔄 Bloc 3 — GNL++ Boostée [🟡 Intermédiaire]
 Partie 1 à 4 : Lecture ligne par ligne, stash, buffer, parsing
 ft_strlen_gnl, ft_strchr_gnl, ft_strdup_gnl, ft_strjoin_gnl
 
@@ -274,7 +277,7 @@ Extraction de lignes
 
 Gestion de la mémoire restante
 
-🧵 Bloc 4 — Pipex++ Boosté [🟡 Intermédiaire]
+##🧵 Bloc 4 — Pipex++ Boosté [🟡 Intermédiaire]
 Partie 1 à 4 : Processus, redirections, exécutions
 Argument parsing, pipes, forks, execve
 
@@ -282,7 +285,7 @@ Exécution des commandes et communication
 
 Finalisation et gestion des erreurs
 
-🐚 Bloc 5 — Minishell++ Boosté [🟠 Avancé]
+##🐚 Bloc 5 — Minishell++ Boosté [🟠 Avancé]
 Partie 1 à 9 : Shell, parsing, readline, signaux, pipes, logique
 Modes avec et sans readline
 
@@ -290,7 +293,7 @@ Implémentation pas à pas d’un shell POSIX
 
 Gestion avancée des erreurs et signaux
 
-🧠 Bloc 6 — Malloc++ Boosté [🟡 à 🔴]
+##🧠 Bloc 6 — Malloc++ Boosté [🟡 à 🔴]
 Partie 1 à 6 : Gestion mémoire custom
 Structures de blocs mémoire
 
@@ -298,7 +301,7 @@ malloc, free, realloc
 
 Fusion des blocs, affichage, debug, tests
 
-🌐 Bloc 7 — Serveur Réseau TCP [🟡 à 🔴]
+##🌐 Bloc 7 — Serveur Réseau TCP [🟡 à 🔴]
 Partie 1 à 8 : Réseau bas niveau
 Serveur mono-client, multi-client
 
@@ -310,7 +313,7 @@ Client personnalisé
 
 Modularité et refactorisation
 
-🎮 Bloc 8 — Moteur 3D OpenGL [🟠 Avancé]
+##🎮 Bloc 8 — Moteur 3D OpenGL [🟠 Avancé]
 Partie 1 à 9 : OpenGL, GLFW, Caméras, Shaders, Textures
 Fenêtre OpenGL, Skybox
 
@@ -318,7 +321,7 @@ Contrôle FPS, ECS, Texturing
 
 Lighting, PBR, Normal Mapping, Instancing
 
-🕹️ Bloc 9 — Renderer PBR & Shaders [🔴 Très avancé]
+##🕹️ Bloc 9 — Renderer PBR & Shaders [🔴 Très avancé]
 Partie 1 à 10 : Physically Based Rendering, ECS, scènes
 Matériaux dynamiques
 
@@ -326,7 +329,7 @@ Lightmaps, HDR, Instancing, IBL
 
 Architecture de scènes orientée ECS
 
-🚀 Bloc 10 — Jeu complet avec ton moteur [🟢 Facile]
+##🚀 Bloc 10 — Jeu complet avec ton moteur [🟢 Facile]
 Partie 1 à 7 : Joueur, ennemis, tirs, HUD
 Contrôle caméra, projectiles, collisions
 
@@ -334,10 +337,10 @@ Effets visuels, menus, HUD
 
 Build final Linux, TDD complet
 
-🌌 Project Zero — Jeu spatial 3D
+##🌌 Project Zero — Jeu spatial 3D
 Compilation, Résultats, Plan d’action, TDD minimal
 
-📥 Annexe
+##📥 Annexe
 Contenu additionnel (Bloc 1 fusionné)
 
 Includes utiles (libft.h, stdio.h, etc.)
