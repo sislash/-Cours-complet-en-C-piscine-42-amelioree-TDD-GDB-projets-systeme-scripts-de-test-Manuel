@@ -50,3 +50,30 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Fichiers de test ou temporaires
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Fichiers de test DSL (SoftCity)
+*.int
+
+# Scripts de test générés
+test_output.txt
+expected_output.txt
+
+# Caches
+.cache/
+*.DS_Store
+
+# Éditeurs (Vim, VSCode, Emacs, etc.)
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*~
+
+# Dossiers système
+Thumbs.db
+desktop.ini
