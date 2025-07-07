@@ -1,2 +1,2 @@
-# ma_piscine42
+# Cursus_C
 programmation "C"
