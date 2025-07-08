@@ -1,4 +1,4 @@
-# 🧠 Cursus C - Piscine Personnelle sur 10 Ans
+# 🧠 Cursus_C_10_Ans
 
 > **Version pédagogique complète en langage C**, structurée comme un véritable manuel évolutif, mêlant apprentissage profond, rigueur style 42, TDD, reverse engineering, architecture logicielle, et philosophie de développement.
 
