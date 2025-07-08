@@ -4,32 +4,27 @@
 
 Ce document n'est pas qu'un simple recueil d'exercices. Il représente une approche pédagogique unique et complète pour maîtriser la programmation en C, inspirée du modèle de la Piscine de l'ecole 42, mais personnalisée pour un apprentissage approfondit.
 
-Son originalité repose sur une combinaison de facteurs :
-*
-**Structuré comme une formation professionnelle :**
-  Chaque bloc est conçu pour bâtir progressivement des compétences solides, allant des bases aux concepts les plus avancés.
-*
-**Rédigé avec la bienveillance d’un mentor :**
-  Le ton se veut encourageant, clair et orienté vers la réussite de l'apprenant. Les explications sont détaillées mais accessibles, et le parcours est pensé pour minimiser la frustration.
-*
-**Organisé comme un projet réel :**
-  La progression est logique et les compétences acquises sont directement applicables à des projets concrets, préparant ainsi l'apprenant aux défis du monde professionnel.
+Son originalité repose sur une combinaison de facteurs.
+
+Structuré comme une formation professionnelle, Chaque bloc est conçu pour bâtir progressivement des compétences solides, allant des bases aux concepts les plus avancés.
+Rédigé avec la bienveillance d’un mentor, Le ton se veut encourageant, clair et orienté vers la réussite de l'apprenant. Les explications sont détaillées mais accessibles, et le parcours est pensé pour minimiser la frustration.
+Organisé comme un projet réel, La progression est logique et les compétences acquises sont directement applicables à des projets concrets, préparant ainsi l'apprenant aux défis du monde professionnel.
 
 ## 📄 Mentions légales & crédits
 
 -   Auteur : **Megnoux Xavier**
--   Provenance : **Provence, France**
+-   Provenance : **belgique , liege**
 -   Aide à la rédaction : **ChatGPT — Modèle GPT-4**
 -   Document librement consultable et partageable à titre personnel.
--   📌 Non affilié à 42. Utilise des méthodes inspirées de l'école 42 (piscine, TDD, progression).
+-   📌 Non affilié à 42. Utilise des méthodes inspirées de l'école 42 (piscine, TDD, progression, réstriction).
 -   Tous les exemples de code sont originaux et générés dans un but pédagogique. Aucun extrait propriétaire ou issu de tiers.
 
 📜 Licence Personnelle d’Utilisation
-Nom du document : Piscine Personnelle - Cursus complet sur 10 ans
+Nom du document : Cursus_C_10_ans
 Auteur : Megnoux Xavier
 Contact : [sckavens@gmail.com]
-Date de création : [01-01-2025]
-Dernière mise à jour : [19-06-2025]
+Date de création : [20-02-2024]
+Dernière mise à jour : [08-07-2025]
 
 🟢 Utilisation autorisée
 Ce document est librement utilisable à des fins personnelles, pédagogiques et non commerciales.
@@ -80,7 +75,7 @@ bienveillance éducative.
 
 Ce cursus n'est **pas un cours théorique complet du langage C**. Il repose sur l'idée que l'élève utilise **un ou plusieurs livres de référence** pour apprendre les notions fondamentales (syntaxe, structures, pointeurs, mémoire, etc.).
 
-🎯 Ce document sert de **guide pratique**, basé sur une approche progressive, rigoureuse, structurée par TDD, et respectant la philosophie de la piscine 42.
+🎯 Ce document sert de **guide pratique**, basé sur une approche progressive, rigoureuse, structurée par TDD.
 
 **Chaque exercice introduit un concept du C par la pratique**, mais il ne le détaille pas toujours en profondeur.  
 📚 L'élève est invité à se référer à ses livres pour :
@@ -357,7 +352,6 @@ Includes utiles (libft.h, stdio.h, etc.)
 9. 🛠️ Années 6-10 [🔴🔴 Expert]: OS perso, automation, CI/CD, Norminette++
 
 ══════════════════════════════════════════════════════════════════════════
-
 # Piscine Boostée - Bloc 1 (Partie 1/5) [🟢 Facile]
 ══════════════════════════════════════════════════════════════════════════
 
@@ -440,7 +434,7 @@ ex00-preparatoire/
 ```
 
 ✍️ Code source minimal
-include/ft_success.h
+📑include/ft_success.h
 ```c
 #ifndef FT_SUCCESS_H
 # define FT_SUCCESS_H
@@ -450,7 +444,7 @@ int ft_success(void);
 #endif
 ```
 
-src/ft_success.c
+📑src/ft_success.c
 ```c
 int ft_success(void)
 {
@@ -458,7 +452,7 @@ int ft_success(void)
 }
 ```
 
-test/main.c
+📑test/main.c
 ```c
 #include "../include/ft_success.h"
 #include <stdio.h>
@@ -478,12 +472,12 @@ int main(void)
 }
 ```
 
-test/expected.txt
+📑test/expected.txt
 ```sh
 SUCCESS
 ```
 
-test/test.sh
+📑test/test.sh
 ```bash
 #!/bin/bash
 
@@ -514,7 +508,7 @@ else
 fi
 ```
 
-Makefile (version locale pour ex00-preparatoire uniquement)
+📑Makefile (version locale pour ex00-preparatoire uniquement)
 ```makefile
 NAME = success_test
 
@@ -555,12 +549,11 @@ Si tu as un message d'erreur pendant l'exécution :
 
 🎯 Résultat attendu
 En lançant :
-
 ```bash
 make test
 ```
-Tu dois voir :
 
+Tu dois voir :
 ✅ ft_success : Test réussi
 
 -------------------------------------------------
@@ -576,7 +569,7 @@ Ce sera le début de ta communication avec le système.
 
 ---
 
-### ✍️ Prototype — `include/ft_putchar.h`###
+📑include/ft_putchar.h
 ```c
 #ifndef FT_PUTCHAR_H
 # define FT_PUTCHAR_H
@@ -587,7 +580,8 @@ void ft_putchar(char c);
 
 #endif // FT_PUTCHAR_H
 ```
-###✍️ Implémentation — `src/ft_putchar.c`###
+
+📑src/ft_putchar.c
 ```c
 #include <unistd.h>
 
@@ -596,6 +590,7 @@ void ft_putchar(char c)
     write(1, &c, 1);
 }
 ```
+
 ##📚 Explication :##
 Tu dois écrire directement sur la sortie standard (l'écran) en utilisant une fonction système de bas niveau.
 
@@ -618,35 +613,33 @@ fd (file descriptor)	Utilisation par défaut
 1	Sortie standard (écran)
 2	Sortie d’erreur standard
 ```
-Cela signifie que :
 
+Cela signifie que :
 write(1, &c, 1); écrit à l’écran
 write(2, &msg, len); affiche une erreur
 read(0, &buf, n); lit depuis le clavier
 
 ##🛑 Interdictions :##
 ❌ Interdit	Raison
-printf	Fonction plus haut niveau, non autorisée ici
-puts	Idem, elle ajoute un retour à la ligne automatiquement
-putchar	Tu es en train de la coder toi-même !
+-	`printf`	Fonction plus haut niveau, non autorisée ici.
+-	`puts`	Idem, elle ajoute un retour à la ligne automatiquement.
+-	`putchar`	Tu es en train de la coder toi-même !
 
 ✅ Tu dois uniquement utiliser write.
 
-💬 Bulle d'ami :
+##💬 Bulle d'ami :##
 "Ton premier dialogue avec l'ordinateur : lui écrire un caractère directement. C’est brut, direct, efficace."
 
-🎯 Mini-TDD
+##🎯 Mini-TDD :##
 Écris un test simple pour vérifier que ton ft_putchar affiche bien un caractère.
 
 📚 TDD — Qu'est-ce que c'est exactement ?
 TDD signifie Test-Driven Development (Développement dirigé par les tests).
 
-➤ Principe :
-Écris un test qui échoue (car le code n’existe pas encore).
-
-Écris juste assez de code pour que le test passe ✅.
-
-Améliore ton code si nécessaire (refactorisation), tout en gardant les tests verts.
+Principe :
+-	Écris un test qui échoue (car le code n’existe pas encore).
+-	Écris juste assez de code pour que le test passe ✅.
+-	Améliore ton code si nécessaire (refactorisation), tout en gardant les tests verts.
 
 🔎 Avantage	📌 Explication
 Moins de bugs	Tu détectes immédiatement les erreurs
@@ -673,6 +666,7 @@ int main(void)
     return 0;
 }
 ```
+
 ✅ Étapes TDD :
 1️⃣ Lance le test ➜ Il échoue si ft_putchar n’est pas codée
 2️⃣ Implémente le code minimal pour que le test réussisse
@@ -680,6 +674,7 @@ int main(void)
 ```txt
 A
 ```
+
 ✅ Bravo ! Test validé.
 
 📋 Résumé rapide : Cycle du TDD
@@ -712,6 +707,7 @@ int main(void) {
     return 0;
 }
 ```
+
 2. Fichier attendu — test/expected.txt
 ```txt
 A
