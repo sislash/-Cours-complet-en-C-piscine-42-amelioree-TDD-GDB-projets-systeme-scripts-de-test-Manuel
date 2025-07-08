@@ -1,0 +1,19 @@
+Copyright © Megnoux Xavier 2025
+
+TOUS DROITS RÉSERVÉS
+
+Ce projet, incluant le fichier `Cursus_C_10_ans.txt` ainsi que tous les fichiers, scripts, tests, arborescences, illustrations et concepts associés, constitue une œuvre originale protégée par le droit d’auteur.
+
+Aucune reproduction, diffusion, modification, traduction, distribution ou exploitation, même partielle, n’est autorisée sans l’accord écrit explicite de l’auteur.
+
+Ce dépôt est publié à titre personnel, symbolique, artistique et pédagogique. Il ne constitue en aucun cas une œuvre open-source ou libre de droits.
+
+Le contenu de ce projet ne peut être utilisé dans un contexte académique, professionnel, commercial ou public sans autorisation écrite préalable.
+
+Pour toute demande de collaboration, de diffusion ou de contribution : veuillez contacter l’auteur.
+
+---
+
+Ce projet est enregistré publiquement via Git pour attester de son authenticité, de son évolution, et de sa paternité.
+
+Violation de ces termes = contrefaçon (articles L335-2 à L335-4 du Code de la Propriété Intellectuelle — France, équivalents internationaux).
