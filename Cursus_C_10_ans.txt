@@ -355,7 +355,7 @@ Includes utiles (libft.h, stdio.h, etc.)
 # Piscine Boostée - Bloc 1 (Partie 1/5) [🟢 Facile]
 ══════════════════════════════════════════════════════════════════════════
 
-**📚 Introduction**
+##📚 Introduction :##
 
 Bienvenue dans ta Piscine Boostée personnelle.
 Tu dois :
@@ -409,7 +409,7 @@ Chaque exercice suit une structure de répertoire précise pour faciliter le TDD
 🎓 exercice_test_environement - préparatoire — ft_success
 -------------------------------------------------
 
-🧠 Objectif
+##🧠 Objectif :##
 Avant d’écrire la moindre fonction, tu vas :
 - Vérifier que ton Makefile fonctionne
 - Structurer correctement ton dossier
@@ -537,7 +537,8 @@ re: fclean all
 
 .PHONY: all clean fclean re test
 ```
-💬 Bulle pédagogique
+
+##💬 Bulle pédagogique :##
 Avant d'apprendre à écrire une fonction, tu dois apprendre à écrire un projet propre.
 Ce test est là pour te rassurer : tout fonctionne ✅. Maintenant, tu peux y aller sereinement !
 
@@ -547,7 +548,7 @@ Si tu as un message d'erreur pendant l'exécution :
 - Vérifie les chemins (../include, ../src…)
 - Lance make test à la racine du dossier
 
-🎯 Résultat attendu
+##🎯 Résultat attendu :##
 En lançant :
 ```bash
 make test
@@ -566,8 +567,6 @@ Afficher un seul caractère sur la sortie standard.
 C’est ton tout premier exercice en langage C.  
 Tu vas apprendre à **parler directement à l’ordinateur** en lui envoyant une lettre à afficher.  
 Ce sera le début de ta communication avec le système.
-
----
 
 📑include/ft_putchar.h
 ```c
@@ -647,7 +646,7 @@ Code plus clair	Tu te concentres sur ce qui est attendu
 Confiance	Tu sais que ton code fonctionne, même après une modif
 Discipline	Tu avances petit à petit, de façon propre
 
-🧪 Exemple de test — test_putchar.c
+📑🧪 Exemple de test — test_putchar.c
 ```c
 #include <unistd.h>
 
@@ -683,8 +682,7 @@ A
 Succès du test	Ton implémentation est correcte
 Refactorisation	Tu peux améliorer sans casser
 
-📢 Remarque importante :
-
+##📢 Remarque importante :##
 Un "test", au début, c’est juste écrire un petit main.c qui vérifie le résultat attendu, sans framework compliqué.
 
 📋 Mini-TDD conseillé pour ft_putchar
@@ -693,11 +691,11 @@ ft_putchar('Z');	Affiche Z
 ft_putchar('0');	Affiche 0
 ft_putchar('\n');	Affiche un retour à la ligne
 
-📢 maintenant un peu plus complexe... |
+📢 maintenant un peu plus complexe... !
 🧪 TDD (Test-Driven Development) en vrai
 Le TDD consiste à écrire les tests avant le code.
 
-1. Fichier de test — test/main.c
+📑1. Fichier de test — test/main.c
 ```c
 #include "../include/ft_putchar.h" // Inclut ton fichier d'en-tête
 
@@ -708,12 +706,12 @@ int main(void) {
 }
 ```
 
-2. Fichier attendu — test/expected.txt
+📑2. Fichier attendu — test/expected.txt
 ```txt
 A
 ```
 
-3. Script de test — test/test.sh
+📑3. Script de test — test/test.sh
 ```bash
 #!/bin/bash
 
@@ -736,17 +734,17 @@ fi
 # Nettoyer les fichiers temporaires
 rm -f ex00_test test/output.txt
 ```
-▶️ Exécution du test :
+##Exécution du test :##
 Dans ton terminal :
 
 ```bash
 cd ex00
 ./test/test.sh
 ```
-🛠️ Compilation
+##🛠️ Compilation :##
 Tu dois avoir un Makefile à la racine de ton projet pour gérer la compilation de tous tes exercices.
 
-Makefile — racine du projet
+📑Makefile — racine du projet
 ```makefile
 # Makefile
 # Ce Makefile est à placer à la racine de ton projet (au même niveau que le répertoire ex00)
@@ -800,7 +798,7 @@ test: clean all
 
 .PHONY: all clean test $(EXERCICES)
 ```
-▶️ Pour compiler ex00 :
+##Pour compiler ex00 :##
 Depuis la racine de ton projet :
 
 ```bash
@@ -832,14 +830,14 @@ C’est le premier bloc fondamental de ta progression. Bravo ! 🎉
 ## 0.0.1) ex01: ft_print_alphabet
 -------------------------------------------------
 
-**Le but :**
+##Le but :##
 Afficher toutes les lettres minuscules de l'alphabet en ordre croissant.
 
-**Prototype :**
+##Prototype :##
 ```c
 void ft_print_alphabet(void);
 ```
-**Explication :**
+##Explication :##
 > On utilise un caractère `char` initialisé à `'a'` et une boucle `while` ou `for` jusqu'à `'z'`.  
 > À chaque itération, on affiche la lettre courante avec `write(1, &c, 1)`, puis on incrémente le
   caractère.
@@ -932,19 +930,19 @@ make ex01 && ./ex01_test
 
 -------------------------------------------------
 
-**Le but :**
+##Le but :##
 Afficher l'alphabet minuscule en ordre décroissant.
 
-**Prototype :**
+##Prototype :##
 ```c
 void ft_print_reverse_alphabet(void);
 ```
 
-**Explication :**
+##Explication :##
 > On initialise un caractère `char c = 'z'`.  
 > Tant que `c >= 'a'`, on l'affiche avec `write(1, &c, 1)` puis on décrémente avec `c--`.
 
-**Interdictions :**
+##Interdictions :##
 > ❌ Pas de printf
 > ✅ Seulement write
 
@@ -1015,9 +1013,7 @@ cd ex02
 4️⃣ Refacto ou extension  Si besoin
 
 -------------------------------------------------
-
 ## 0.0.3) ex03: ft_print_numbers
-
 -------------------------------------------------
 
 **Le but :**
