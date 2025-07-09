@@ -1,3 +1,22 @@
+#⚠️ Avertissement : Cursus en cours de création ⚠️
+
+Ce document est un travail personnel en cours de développement. Il n'est pas terminé et peut contenir :
+
+- Des parties incomplètes ou manquantes
+- Des erreurs, fautes, ou incohérences
+- Des éléments en cours de test ou de réflexion
+
+🎓 Ce cursus a pour objectif de m’aider à apprendre le langage C moi-même, étape par étape, en structurant mes connaissances comme une formation personnelle.
+
+Il est basé sur mes lectures, recherches, expérimentations, inspirations (notamment la piscine 42), et mes propres idées.
+
+🛠️ Le projet évolue en temps réel avec ma progression, donc certaines sections peuvent changer, être réécrites, renommées, ou déplacées.
+
+Merci de votre compréhension ! 🙏
+Toute suggestion, correction ou idée est la bienvenue pour améliorer ce travail.
+
+— ✍️ Auteur : [Megnoux Xavier] — en auto-formation
+
 # 🧠 Cursus_C_10_Ans
 
 > **Version pédagogique complète en langage C**, structurée comme un véritable manuel évolutif, mêlant apprentissage profond, rigueur style 42, TDD, reverse engineering, architecture logicielle, et philosophie de développement.
