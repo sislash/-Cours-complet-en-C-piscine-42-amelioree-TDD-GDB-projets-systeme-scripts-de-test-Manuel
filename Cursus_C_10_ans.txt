@@ -51,7 +51,7 @@ Cela comprend notamment :
 Tu peux adapter le contenu pour ton usage personnel uniquement, mais toute modification ou dérivé destiné à être
 partagé (même gratuitement) doit impérativement être soumis à validation préalable auprès de l’auteur.
 Usage                                          |Autorisé ?
-_______________________________________________|_________________________________
+-----------------------------------------------|-------------------------------------
 Amélioration pour soi : autorisée              | ✅ Oui
 Modifier et diffuser à d'autres                | 🔒 Non, sans autorisation
 Traduire ou inclure dans un projet             | 🔒 Non, sans autorisation
@@ -347,11 +347,10 @@ Tu dois :
 /*                                                                           */
 /* ***************************************************************************/
 
-##Rappel important pour l'organisation de ton code
+[Rappel] important pour l'organisation de ton code
 À respecter dès l'exercice 1 :
 
-##Rappel Structure des fichiers pour ex00
-
+[Rappel] Structure des fichiers pour ex00
 Chaque exercice suit une structure de répertoire précise pour faciliter le TDD (Test-Driven Development) et l'organisation.
 
 ```bash
@@ -469,11 +468,11 @@ gcc -Wall -Wextra -Werror -Iinclude src/ft_success.c test/main.c -o success_test
 
 # Comparaison
 if diff test/output.txt test/expected.txt > /dev/null; then
-    echo -e "${GREEN}V ft_success : Test réussi${NC}"
+    echo -e "${GREEN} ft_success : Test réussi${NC}"
     rm -f test/output.txt success_test
     exit 0
 else
-    echo -e "${RED}X ft_success : Échec du test${NC}"
+    echo -e "${RED} ft_success : Échec du test${NC}"
     echo "Contenu obtenu :"
     cat test/output.txt
     echo "Attendu :"
@@ -525,12 +524,14 @@ Si tu as un message d'erreur pendant l'exécution :
 
 ###Résultat attendu :###
 En lançant :
+
 ```bash
 make test
 ```
 
 Tu dois voir :
-V ft_success : Test réussi
+
+ft_success : Test réussi
 
 -------------------------------------------------
 ## 0.0.0) ex00: ft_putchar
@@ -599,7 +600,7 @@ read(0, &buf, n); lit depuis le clavier
 
 ###Interdictions :###
 Interdit	       | Raison
-_______________________|____________________________________________________
+-----------------------|-------------------------------------------------------------
 - `printf`             | Fonction plus haut niveau, non autorisée ici.
 - `puts`	       | Idem, elle ajoute un retour à la ligne automatiquement.
 - `putchar`            | Tu es en train de la coder toi-même !
@@ -621,7 +622,7 @@ Principe :
 - Améliore ton code si nécessaire (refactorisation), tout en gardant les tests verts.
 
 Avantage	   |Explication
-___________________|__________________________________________________________
+-------------------|----------------------------------------------------------------
 Moins de bugs	   | Tu détectes immédiatement les erreurs
 Code plus clair	   | Tu te concentres sur ce qui est attendu
 Confiance	   | Tu sais que ton code fonctionne, même après une modif
@@ -671,10 +672,11 @@ Refactorisation	Tu peux améliorer sans casser
 Un "test", au début, c’est juste écrire un petit main.c qui vérifie le résultat attendu, sans framework compliqué.
 
 Mini-TDD conseillé pour ft_putchar
-Test	Attendu
-ft_putchar('Z');	Affiche Z
-ft_putchar('0');	Affiche 0
-ft_putchar('\n');	Affiche un retour à la ligne
+Test	                | Attendu
+------------------------|----------------------------------
+ft_putchar('Z');	| Affiche Z
+ft_putchar('0');	| Affiche 0
+ft_putchar('\n');	| Affiche un retour à la ligne
 
 ###Maintenant TDD un peu plus complexe ! :###
 TDD (Test-Driven Development) en vrai
@@ -722,6 +724,7 @@ fi
 # Nettoyer les fichiers temporaires
 rm -f ex00_test test/output.txt
 ```
+
 ###Exécution du test :###
 Dans ton terminal :
 
@@ -788,6 +791,7 @@ test: clean all
 
 .PHONY: all clean test $(EXERCICES)
 ```
+
 ###Pour compiler ex00 :###
 Depuis la racine de ton projet :
 
@@ -885,9 +889,9 @@ diff test/output.txt test/expected.txt > /dev/null
 
 # Affichage résultat
 if [ $? -eq 0 ]; then
-    echo "✅ ex01: Test réussi"
+    echo "ex01: Test réussi"
 else
-    echo "❌ ex01: Test échoué"
+    echo "ex01: Test échoué"
 fi
 
 # Nettoyage
@@ -904,9 +908,9 @@ SRC_ex01 = ft_print_alphabet
 
 ###Cycle TDD résumé :###
 Étape Action
-1. Écris un test  test/main.c
+1. Écris un test test/main.c
 2. Code minimal ft_print_alphabet.c
-3. Test OK ?  ✅
+3. Test OK ?
 4. Refacto si besoin  (par exemple : meilleur nom de variable, clarté)
 
 ###Bonus :###
@@ -1067,13 +1071,14 @@ diff test/output.txt test/expected.txt > /dev/null
 
 # Résultat
 if [ $? -eq 0 ]; then
-    echo "✅ ex03: Test réussi"
+    echo "ex03: Test réussi"
 else
-    echo "❌ ex03: Test échoué"
+    echo "ex03: Test échoué"
 fi
 
 # Nettoyage
 rm -f ex03_test test/output.txt
+```
 
 ###Entrée dans le Makefile principal :###
 Ajoute dans ton Makefile ce qu'il manque pour compiler.
@@ -1166,9 +1171,9 @@ diff test/output.txt test/expected.txt > /dev/null
 
 # Résultat
 if [ $? -eq 0 ]; then
-    echo "✅ ex04: Test réussi"
+    echo "ex04: Test réussi"
 else
-    echo "❌ ex04: Test échoué"
+    echo "ex04: Test échoué"
 fi
 
 # Nettoyage
@@ -1249,14 +1254,15 @@ diff test/output.txt test/expected.txt > /dev/null
 
 # Résultat
 if [ $? -eq 0 ]; then
-  echo "✅ ex05: Test réussi"
+  echo "ex05: Test réussi"
 else
-  echo "❌ ex05: Test échoué"
+  echo "ex05: Test échoué"
 fi
 
 # Nettoyage
 rm -f ex05_test test/output.txt
 ```
+
 Oublie pas le Makefile
 
 ###Exécution du test :###
@@ -1326,14 +1332,15 @@ diff test/output.txt test/expected.txt > /dev/null
 
 # Résultat
 if [ $? -eq 0 ]; then
-  echo "✅ ex06: Test réussi"
+  echo "ex06: Test réussi"
 else
-  echo "❌ ex06: Test échoué"
+  echo "ex06: Test échoué"
 fi
 
 # Nettoyage
 rm -f ex06_test test/output.txt
 ```
+
 Entrée dans le Makefile.
 
 ###Exécution du test :###
@@ -1536,6 +1543,7 @@ int main(void)
 ```
 
 Fichier attendu : test/expected.txt
+
 ```txt
 01, 02, 03, ..., 89
 012, 013, ..., 789
@@ -1663,30 +1671,26 @@ Règle pro : TOUS tes headers doivent être protégés. Toujours. Sans exception
 Ces macros sont automatiquement remplacées par des informations du contexte de compilation :
 
 __FILE__ → nom du fichier courant
-
 __LINE__ → numéro de ligne actuel
-
 __DATE__ → date de compilation
-
 __TIME__ → heure de compilation
 
-🎁 Astuce bonus :
+Astuce bonus :
 
-c
-Copier
-Modifier
+```c
 #define TRACE write(1, __FILE__ ":" __DATE__ "\n", sizeof(__FILE__ ":" __DATE__ "\n") - 1)
-🔬 Exercices
+```
 
-📂 preprocessor/ex00 — Macro SQUARE(x)
-🧠 Objectif : Créer une macro qui retourne le carré d’un entier.
-🎓 But pédagogique : Comprendre les effets de bord, les parenthèses obligatoires.
+Exercices
+- preprocessor/ex00 — Macro SQUARE(x)
+- Objectif : Créer une macro qui retourne le carré d’un entier.
+- But pédagogique : Comprendre les effets de bord, les parenthèses obligatoires.
 
-c
-Copier
-Modifier
+```c
 #define SQUARE(x) ((x) * (x))
-👨‍🏫 À tester :
+```
+
+À tester :
 
 SQUARE(4) → 16
 
@@ -1694,15 +1698,13 @@ SQUARE(1+2) → ✅ ((1+2)*(1+2)) = 9
 
 BAD(1+2) → ❌ (voir piège ci-dessus)
 
-✏️ Conseil : ajoute un fichier test.sh avec redirection > logs/output.txt
-📘 N’oublie pas que tu ne peux pas utiliser printf, alors remplace-le par write() + ft_putnbr().
+Conseil : ajoute un fichier test.sh avec redirection > logs/output.txt
+N’oublie pas que tu ne peux pas utiliser printf, alors remplace-le par write() + ft_putnbr().
 
-📂 preprocessor/ex01 — Afficher les métadonnées
-🧠 Objectif : Afficher __FILE__, __LINE__, __DATE__, __TIME__
+preprocessor/ex01 — Afficher les métadonnées
+Objectif : Afficher __FILE__, __LINE__, __DATE__, __TIME__
 
-c
-Copier
-Modifier
+```c
 #include <unistd.h>
 
 void  ft_putnbr(int nb);
@@ -1724,14 +1726,14 @@ int main(void)
 
   return 0;
 }
-📘 Tu peux créer ta propre lib libft_print/ pour ft_putstr() et ft_putnbr(), réutilisable dans tout le projet.
+```
 
-📂 preprocessor/ex02 — Activer ou désactiver le mode debug
-🧠 Objectif : Utiliser #ifdef et -DDEBUG pour afficher un message
+Tu peux créer ta propre lib libft_print/ pour ft_putstr() et ft_putnbr(), réutilisable dans tout le projet.
 
-c
-Copier
-Modifier
+preprocessor/ex02 — Activer ou désactiver le mode debug
+Objectif : Utiliser #ifdef et -DDEBUG pour afficher un message
+
+```c
 #include <unistd.h>
 
 int main(void) {
@@ -1742,49 +1744,46 @@ int main(void) {
 #endif
     return 0;
 }
-🛠️ Compilation :
+```
 
-bash
-Copier
-Modifier
+Compilation :
+
+```bash
 gcc -DDEBUG ex02.c -o ex02_debug
 gcc ex02.c -o ex02_nodebug
-👨‍🏫 Conseil : compare les deux binaires avec diff <(./ex02_debug) <(./ex02_nodebug)
+```
 
-📂 preprocessor/ex03 — Message au moment de la compilation
-🧠 Objectif : Utiliser #pragma message
+Conseil : compare les deux binaires avec diff <(./ex02_debug) <(./ex02_nodebug)
 
-c
-Copier
-Modifier
-#pragma message("⚠️ Compilation en cours — attention au code !")
+preprocessor/ex03 — Message au moment de la compilation
+Objectif : Utiliser #pragma message
+
+```c
+#pragma message("Compilation en cours — attention au code !")
 
 int main(void) {
     return 0;
 }
-📌 Ce message n’apparaît pas à l'exécution, mais dans le terminal au moment du gcc.
+```
 
-🎯 Utilité :
+Ce message n’apparaît pas à l'exécution, mais dans le terminal au moment du gcc.
 
+Utilité :
 Laisser un avertissement visuel au compilateur
-
 Éviter de commettre du code instable
 
-📦 Astuces bonus
-
+Astuces bonus
 Pour afficher le code généré après prétraitement :
 
-bash
-Copier
-Modifier
+```bash
 gcc -E mon_programme.c > preprocessed.c
+```
+
 Tu verras comment le compilateur voit ton code après le passage du préprocesseur.
 
-📂 Exemple de fichier config.h global :
+Exemple de fichier config.h global :
 
-c
-Copier
-Modifier
+```c
 #ifndef CONFIG_H
 #define CONFIG_H
 
@@ -1793,13 +1792,12 @@ Modifier
 #define DEBUG_LEVEL 2
 
 #endif
-🧠 Tu peux inclure ce fichier dans tous tes projets pour avoir une signature claire.
+```
 
-🛠️ Mini Makefile à utiliser
+Tu peux inclure ce fichier dans tous tes projets pour avoir une signature claire.
+Mini Makefile à utiliser
 
-makefile
-Copier
-Modifier
+```makefile
 # Makefile
 NAME = ex02
 SRC = ex02.c
@@ -1811,41 +1809,39 @@ debug:
 nodebug:
   @gcc -Wall -Wextra -Werror $(SRC) -o $(NAME)_nodebug
   @./$(NAME)_nodebug
-📌 À retenir :
+```
 
+À retenir :
 Les macros ne sont pas des fonctions.
 
-Le préprocesseur est aveugle : il ne comprend pas la sémantique, juste le texte.
-
+Le préprocesseur est aveugle :
+il ne comprend pas la sémantique, juste le texte.
 Il ne faut jamais faire confiance à une macro sans parenthèses.
-
 C’est un outil puissant pour la portabilité, la compilation conditionnelle et la gestion de la version.
 
-🧠 Pourquoi c’est fondamental ?
+Pourquoi c’est fondamental ?
 
 Tu peux créer des logs temporaires sans polluer ton code final.
-
 Tu protèges tous tes headers.
-
 Tu écris du code plus propre, plus modulaire, et plus rapide à compiler.
-
 C’est le premier pas vers des outils comme cmake, autoconf, etc.
 
-🧭 Prochaine étape :
+Prochaine étape :
 On retourne dans la piscine avec l’exercice ex09, en commençant à explorer les pointeurs, la mémoire, et des choses plus profondes.
 
 -------------------------------------------------
-🧩 0.0.9) ex09 — ft_ultimate_ft : 9 niveaux de réalité
+##0.0.9) ex09 — ft_ultimate_ft : 9 niveaux de réalité
 -------------------------------------------------
-🎯 Objectif pédagogique :
+###Objectif :###
 Comprendre et manipuler plusieurs niveaux de pointeurs (jusqu’à 9) pour accéder à une valeur finale et la modifier. Cet exercice est symbolique : il démontre que peu importe le nombre de couches d’indirection, le principe reste identique.
 
-🔧 Prototype :
-c
-Copier
-Modifier
+###Prototype :###
+
+```c
 void ft_ultimate_ft(int *********nbr);
-🧠 Explication mémoire :
+```
+
+Explication mémoire :
 Un pointeur est une boîte contenant l’adresse d’une autre boîte.
 Cet exercice imbrique 9 boîtes jusqu’à la valeur finale.
 
@@ -1858,19 +1854,18 @@ p9  int*********  adresse de p8
 
 Et donc :
 
-c
-Copier
-Modifier
+```c
 *********nbr = 42;
-✅ Cela modifie bien val à travers les 9 niveaux !
+```
 
-💬 Bulle d’ami :
+Cela modifie bien val à travers les 9 niveaux !
+
+###Bulle d’ami :###
 "Chaque * est une loupe : elle permet de descendre d’un niveau vers la réalité. Avec neuf loupes, tu peux toucher la vérité."
 
-📁 Arborescence du projet :
-txt
-Copier
-Modifier
+###Arborescence du projet :###
+
+```bash
 ex09/
 ├── include/
 │   ├── ft_ultimate_ft.h
@@ -1886,40 +1881,44 @@ ex09/
 │   ├── output.txt
 │   └── test.sh
 └── Makefile
-📦 include/ft_ultimate_ft.h
-c
-Copier
-Modifier
+```
+
+include/ft_ultimate_ft.h
+
+```c
 #ifndef FT_ULTIMATE_FT_H
 # define FT_ULTIMATE_FT_H
 
 void ft_ultimate_ft(int *********nbr);
 
 #endif
-📦 src/ft_ultimate_ft.c
-c
-Copier
-Modifier
+```
+
+src/ft_ultimate_ft.c
+
+```c
 #include "ft_ultimate_ft.h"
 
 void ft_ultimate_ft(int *********nbr)
 {
     *********nbr = 42;
 }
-📦 include/ft_putnbr.h
-c
-Copier
-Modifier
+```
+
+include/ft_putnbr.h
+
+```c
 #ifndef FT_PUTNBR_H
 # define FT_PUTNBR_H
 
 void ft_putnbr(int nb);
 
 #endif
-📦 src/ft_putnbr.c
-c
-Copier
-Modifier
+```
+
+src/ft_putnbr.c
+
+```c
 #include <unistd.h>
 #include "ft_putnbr.h"
 
@@ -1944,20 +1943,22 @@ void ft_putnbr(int nb)
         ft_putnbr(nb / 10);
     ft_putchar(nb % 10 + '0');
 }
-📦 include/ft_putstr.h
-c
-Copier
-Modifier
+```
+
+include/ft_putstr.h
+
+```c
 #ifndef FT_PUTSTR_H
 # define FT_PUTSTR_H
 
 void ft_putstr(char *str);
 
 #endif
-📦 src/ft_putstr.c
-c
-Copier
-Modifier
+```
+
+src/ft_putstr.c
+
+```c
 #include <unistd.h>
 #include "ft_putstr.h"
 
@@ -1966,10 +1967,11 @@ void ft_putstr(char *str)
     while (*str)
         write(1, str++, 1);
 }
-🧪 test/main.c
-c
-Copier
-Modifier
+```
+
+test/main.c
+
+```c
 #include "../include/ft_ultimate_ft.h"
 #include "../include/ft_putnbr.h"
 #include "../include/ft_putstr.h"
@@ -1996,15 +1998,17 @@ int main(void)
 
     return 0;
 }
-📄 test/expected.txt
-txt
-Copier
-Modifier
-Résultat : 42
-🧪 test/test.sh
-bash
-Copier
-Modifier
+```
+
+test/expected.txt
+
+```txt
+42
+```
+
+test/test.sh
+
+```bash
 #!/bin/bash
 
 cd .. > /dev/null
@@ -2017,11 +2021,12 @@ echo "Résultat obtenu :"
 cat test/output.txt
 echo
 
-diff test/output.txt test/expected.txt && echo "✅ Test OK" || echo "❌ Test FAIL"
-🛠️ Makefile
-makefile
-Copier
-Modifier
+diff test/output.txt test/expected.txt && echo "Test OK" || echo "Test FAIL"
+```
+
+###Makefile :###
+
+```makefile
 NAME = ex09
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
@@ -2040,57 +2045,59 @@ clean:
 fclean: clean
 
 re: fclean all
-🔬 Reverse Engineering
-bash
-Copier
-Modifier
+```
+
+###Reverse Engineering :###
+
+```bash
 nm ex09 | grep ft_ultimate_ft
 objdump -d ex09 | grep -A10 ft_ultimate_ft
+```
+
 Extrait ASM possible :
 
-asm
-Copier
-Modifier
+```asm
 ft_ultimate_ft:
   mov    DWORD PTR [rdi], 0x2a    ; 42 en hexadécimal
   ret
-📘 À retenir
-✅ Concept ✏️ Détail
+```
+À retenir
+Concept Détail
 Pointeurs imbriqués Chaque * descend d’un niveau
 Accès par indirection Tu ne modifies pas la variable directement
 Manipulation sécurisée  Pas de cast, pas d'artifice
 Pureté C  Aucun outil non autorisé
 Pédagogie mémoire Tu explores la pile de manière symbolique
 
-🎓 Bonus Universitaire — Pour aller plus loin
-👉 Ajoute un affichage des adresses mémoire :
+Bonus Universitaire — Pour aller plus loin
+Ajoute un affichage des adresses mémoire :
 
-c
-Copier
-Modifier
+exemple avec stdio.h mai interdi donc ici, à faire avec write()
+
+```c
 #include <stdio.h>
 
 printf("Adresse de val : %p\n", (void *)&val);
 printf("Adresse de p1  : %p\n", (void *)&p1);
 printf("Adresse de p9  : %p\n", (void *)p9);
-👉 Et visualise le déroutant mais magnifique labyrinthe de pointeurs.
+```
 
-🧭 Ce que tu apprends ici :
-🧱 Base posée  Ce que tu sauras faire ensuite
+Et visualise le déroutant mais magnifique labyrinthe de pointeurs.
+
+Ce que tu apprends ici :
+Base posée  Ce que tu sauras faire ensuite
 Manipuler des structures imbriquées Structs, arbres, graphes
 Passer des pointeurs à des fonctions  Tri, swap, double pointeurs
 Ne plus avoir peur des étoiles *  Même dans char ***argv
 Travailler proprement Avec fichiers séparés, Makefile et tests
 
 -------------------------------------------------
-
 # Piscine Boostée - Bloc 1 (Partie 2/5) [🟢 Facile]
-
 -------------------------------------------------
 ## 0.0.10) ft_swap — [🟢 Facile] L’art de l’échange mémoire
 -------------------------------------------------
 
-🎯 Objectif :
+###Objectif :###
 Échanger les **valeurs de deux entiers** passés par **adresse mémoire** grâce à des pointeurs.
 
 ---
