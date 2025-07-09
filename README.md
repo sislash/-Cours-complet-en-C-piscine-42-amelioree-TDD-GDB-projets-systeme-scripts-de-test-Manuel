@@ -66,11 +66,15 @@ Le cursus est découpé en **blocs pédagogiques évolutifs**, chacun contenant 
 ### 🔹 Blocs actuels :
 
 - `0.0.0` : **Préparation de l’environnement** (`ft_success`)
-- Bloc 0 : Exercices fondamentaux (affichages, conditions)
-- Bloc 1 : Tableaux, pointeurs, chaînes
-- Bloc 2 : Mémoire, allocation dynamique, gestion avancée
-- Bloc 3 : Libft++ (fonctions fondamentales approfondies)
-- Bloc 4 à 10 : Shell, Réseau, Analyse binaire, Système temps réel, Architecture
+- 🚀 Bloc 1 [🟢 Facile]: Les Fondamentaux en C
+- 📦 Bloc 2 [🟢 Facile]: Libft++ et Fonctions standard
+- 🔄 Bloc 3 [🟡 Intermédiaire]: Get Next Line, Parsing et Buffers
+- 🧵 Bloc 4 [🟡 Intermédiaire]: Pipex et manipulation de processus
+- 🐚 Bloc 5 [🟠 Avancé]: Minishell & analyse syntaxique avancée
+- 🎨 Année 2 [🟠 Avancé]: Graphisme et réseau (Cub3D++, MiniRT++)
+- 💻 Année 3 [🔴 Très avancé]: Moteur, FS, Shell avancé
+- 🧠 Années 4-5 [🔴 Très avancé]: OS, compilateurs, sécurité
+- 🛠️ Années 6-10 [🔴🔴 Expert]: OS perso, automation, CI/CD, Norminette++
 
 ### 🔸 Chaque exercice inclut :
 
