@@ -1,4 +1,4 @@
-#⚠️ Avertissement : Cursus en cours de création ⚠️
+⚠️ Avertissement : Cursus en cours de création ⚠️
 
 Ce document est un travail personnel en cours de développement. Il n'est pas terminé et peut contenir :
 
