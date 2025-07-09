@@ -24,6 +24,22 @@ Merci pour votre compréhension 🙏
 
 ---
 
+## 🧩 À propos de la création du contenu
+
+Tous les exercices, exemples de code, structures de projet, scripts `.sh` ou tests, sont à l’origine **rédigés et proposés par l’assistant ChatGPT** dans le cadre de mon apprentissage.
+
+Ensuite, **chaque exercice est revu, corrigé, modifié ou réorganisé par moi**, selon :
+
+- mon niveau actuel en langage C  
+- mes besoins pédagogiques du moment  
+- ma compréhension des notions abordées  
+- mes choix personnels de style, de rigueur, ou de philosophie
+
+> 📌 **Le document final reflète donc ma compréhension, mes choix, ma progression et ma validation personnelle.**  
+> Il ne s’agit pas d’un simple copier-coller, mais bien d’un **travail d’apprentissage actif et critique**.
+
+---
+
 ## 📁 Présentation
 
 Ce dépôt contient le fichier principal `Cursus_C_10_ans.txt` :  
@@ -115,4 +131,3 @@ Pour toute remarque, question, correction ou collaboration autour :
 ---
 
 ### 🧠 Merci pour votre lecture et bon apprentissage à tous !
-
