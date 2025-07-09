@@ -1,94 +1,118 @@
-⚠️ Avertissement : Cursus en cours de création ⚠️
+# 🧠 Cursus_C_10_Ans — Manuel personnel d'apprentissage du langage C
 
-Ce document est un travail personnel en cours de développement. Il n'est pas terminé et peut contenir :
+---
 
-- Des parties incomplètes ou manquantes
-- Des erreurs, fautes, ou incohérences
-- Des éléments en cours de test ou de réflexion
+⚠️ **Avertissement : Projet en cours de création** ⚠️
 
-🎓 Ce cursus a pour objectif de m’aider à apprendre le langage C moi-même, étape par étape, en structurant mes connaissances comme une formation personnelle.
+Ce document est un **travail personnel**, en **évolution constante**.  
+Il n'est **pas terminé** et peut contenir :
 
-Il est basé sur mes lectures, recherches, expérimentations, inspirations (notamment la piscine 42), et mes propres idées.
+- Des parties incomplètes ou manquantes  
+- Des erreurs, fautes, ou incohérences  
+- Des éléments en test, en réécriture ou en réflexion  
 
-🛠️ Le projet évolue en temps réel avec ma progression, donc certaines sections peuvent changer, être réécrites, renommées, ou déplacées.
+🎓 Ce cursus a pour objectif de **m’aider à apprendre le langage C par moi-même**, étape par étape, en structurant mes connaissances comme une **formation personnelle approfondie**.
 
-Merci de votre compréhension ! 🙏
-Toute suggestion, correction ou idée est la bienvenue pour améliorer ce travail.
+📌 Il est basé sur mes lectures, mes expériences, mes recherches, ainsi que mes inspirations (notamment la **piscine 42**), tout en étant **entièrement repensé selon ma vision du code et de la pédagogie**.
 
-— ✍️ Auteur : [Megnoux Xavier] — en auto-formation
+🛠️ Le projet évolue **en temps réel avec ma progression**. Certaines parties sont régulièrement modifiées, renommées, améliorées ou restructurées. Rien n’est figé.
 
-# 🧠 Cursus_C_10_Ans
+Merci pour votre compréhension 🙏  
+> **Toute suggestion, idée ou correction est la bienvenue pour faire progresser ce travail.**
 
-> **Version pédagogique complète en langage C**, structurée comme un véritable manuel évolutif, mêlant apprentissage profond, rigueur style 42, TDD, reverse engineering, architecture logicielle, et philosophie de développement.
+> — ✍️ Auteur : **Megnoux Xavier** — en auto-formation C
 
 ---
 
 ## 📁 Présentation
 
-Ce dépôt contient le document `Cursus_C_10_ans.txt` :  
-un **manuel complet, progressif et structuré**, conçu pour apprendre le langage C de manière rigoureuse et autodidacte, sur une durée potentielle de plusieurs années.
+Ce dépôt contient le fichier principal `Cursus_C_10_ans.txt` :  
+un **manuel personnel, structuré et progressif**, pensé pour apprendre le **langage C en profondeur**, de zéro jusqu’à un niveau avancé, sur une durée de plusieurs années (10 ans si suivi complet).
 
-Il s'inspire de la pédagogie de l'école 42, mais va bien plus loin :  
-il inclut des notions avancées comme :
+Il suit une pédagogie rigoureuse et expérimentale, inspirée de l’école 42, mais **bien plus vaste** dans sa vision, intégrant :
 
-- TDD (Test Driven Development)
+- Test Driven Development (TDD)
 - Reverse Engineering (nm, objdump, analyse ASM)
-- Mémoire et sécurité
-- Scripts de test `.sh`
+- Simulation de systèmes réels
+- Architecture mémoire, gestion manuelle
+- Philosophie logicielle et éthique du code
+- Analyse et scripts `.sh` automatisés
 - Constitution logicielle
-- Architecture symbolique (ex : SoftCity)
-- Éthique du code et vision long terme
+- Projet de ville virtuelle symbolique : **SoftCity**
+- Vision artistique et pédagogique
 
 ---
 
 ## 📚 Structure du document
 
-Le document est découpé en **blocs pédagogiques** :
+Le cursus est découpé en **blocs pédagogiques évolutifs**, chacun contenant plusieurs exercices rigoureux, testés et documentés.
 
-- 🔹 Préparation de l'environnement (`ft_success`)
-- 🔸 Bloc 0 : Exercices fondamentaux (affichages, conditions)
-- 🔸 Bloc 1 : Pointeurs, tableaux, chaînes
-- 🔸 Bloc 2 : Mémoire, allocation, gestion manuelle
-- 🔸 Bloc 3 : Libft++
-- 🔸 Bloc 4 à 10 : Shell, analyse binaire, réseau, système réel
-- 🔒 + Projets bonus, Constitution, simulateur de ville, etc.
+### 🔹 Blocs actuels :
 
-Chaque exercice inclut :
+- `0.0.0` : **Préparation de l’environnement** (`ft_success`)
+- Bloc 0 : Exercices fondamentaux (affichages, conditions)
+- Bloc 1 : Tableaux, pointeurs, chaînes
+- Bloc 2 : Mémoire, allocation dynamique, gestion avancée
+- Bloc 3 : Libft++ (fonctions fondamentales approfondies)
+- Bloc 4 à 10 : Shell, Réseau, Analyse binaire, Système temps réel, Architecture
 
-- 🎯 Objectif clair
-- 🧪 Tests automatisés
-- 🛠️ Script `test.sh` intégré
-- 🔍 Sections Git, GDB, ASM, Reverse
-- 📌 Notes pédagogiques et cas limites
+### 🔸 Chaque exercice inclut :
 
----
-
-## 🔒 Droits et mentions légales
-
-Ce document est une **œuvre personnelle protégée**.  
-Toute reproduction, diffusion ou modification **est interdite** sans autorisation.
-
-Copyright © [Mengoux Xavier] [2025]
-
-Ce document est protégé par le droit d’auteur.
-Aucune reproduction, réutilisation ou diffusion n’est autorisée sans accord écrit.
-
-> Ce projet n’est ni open source, ni destiné à l’usage collectif.  
-> Il s’agit d’un **outil personnel d’apprentissage avancé**, publié à titre symbolique et artistique.
+- 🎯 Objectif clair et progressif  
+- 🧪 Cas de tests et TDD (Test Driven Development)  
+- 🛠️ Script de test automatisé `.sh`  
+- 🔍 Analyse Git, GDB, nm, objdump  
+- 📌 Étude de cas limites, bugs possibles, bonnes pratiques  
+- 📦 Convention Git, structuration en `.h/.c`, Makefile  
+- 💬 Commentaires pédagogiques et bulles de discussion style 42  
+- 🔬 Bonus : analyse ASM, reverse engineering réel  
+- 📘 README spécifiques par module (mairie, commissariat, etc.)  
 
 ---
 
-## 🧾 Historique et preuve d’authenticité
+## 🔒 Mentions légales
 
-Les commits de ce dépôt font foi d’un travail original, versionné, et contrôlé.
+- **Auteur** : Megnoux Xavier  
+- **Contact** : [sckavens@gmail.com]  
+- **Copyright** © 2025 Megnoux Xavier  
+- Tous droits réservés.  
+- Ce projet est **une œuvre personnelle protégée par le droit d’auteur**.
 
-Quand le document sera finalisé, une empreinte SHA256 y sera ajoutée pour garantir son intégrité.
+### ❌ Restrictions :
+
+- **Reproduction, modification, diffusion ou commercialisation** interdites sans **autorisation écrite**.
+- Le projet **n’est pas open-source**, ni destiné à un usage collectif.
+- Il s’agit d’un **outil privé, artistique et pédagogique**, publié à titre symbolique, **non terminé** et en évolution permanente.
+
+---
+
+## 🧾 Authenticité & suivi
+
+- L’historique Git sert de **preuve de travail versionné, continu, et authentique**.
+- Quand le document sera stabilisé, une **empreinte SHA256** sera ajoutée dans l’en-tête du fichier pour garantir son **intégrité et sa traçabilité**.
+
+---
+
+## 🌱 Statut du projet
+
+> 🛠️ **Actif — En développement permanent**  
+> 🧪 **Non finalisé — En expérimentation constante**  
+> 🚧 **Certaines sections sont manquantes ou à revoir**  
+> 🧠 **Évolution parallèle à mon propre apprentissage du langage C**
 
 ---
 
 ## 💬 Contact
 
-Pour toute question ou collaboration (pédagogie, art logiciel, philosophie du C) :  
-📧 [sckavens@gmail.com]
+Pour toute remarque, question, correction ou collaboration autour :  
+- de la pédagogie en C  
+- de l’éthique logicielle  
+- du projet **SoftCity** ou de l’architecture symbolique  
+- ou simplement pour échanger sur ce cursus
+
+📧 **sckavens@gmail.com**
 
 ---
+
+### 🧠 Merci pour votre lecture et bon apprentissage à tous !
+
