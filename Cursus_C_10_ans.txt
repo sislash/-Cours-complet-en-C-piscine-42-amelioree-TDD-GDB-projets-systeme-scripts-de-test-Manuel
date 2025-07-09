@@ -2100,48 +2100,43 @@ Travailler proprement Avec fichiers séparés, Makefile et tests
 ###Objectif :###
 Échanger les **valeurs de deux entiers** passés par **adresse mémoire** grâce à des pointeurs.
 
----
+###Prototype :###
 
-📌 Prototype :
 ```c
 void ft_swap(int *a, int *b);
-🧪 Explication pédagogique :
+```
+
+###Explication pédagogique :###
 Un pointeur (int *a) est une variable qui contient l'adresse mémoire d'une autre variable.
 Lorsque tu passes &x à une fonction, tu transmets la référence de x.
-
 Modifier *a dans la fonction revient à modifier directement x dans la fonction appelante.
 
 Ce mécanisme est fondamental en C et sert dans :
-
 les algorithmes de tri,
-
 les structures de données,
-
 la gestion dynamique de mémoire.
 
-🛑 Interdictions :
+###Interdictions :###
 
-❌ Interdit  🔒 Raison pédagogique
-printf, scanf, stdlib.h, stdio.h  Non autorisés en piscine
-Cast de type (ex : (int) ou (void *)) Hors contexte
-Retour de valeur  L’effet doit être visible par pointeur
+Interdit                                |Raison pédagogique
+----------------------------------------|----------------------------
+printf, scanf, stdlib.h, stdio.h        | Non autorisés en piscine
+Cast de type (ex : (int) ou (void *))   | Hors contexte
+Retour de valeur                        | L’effet doit être visible par pointeur
+
 Utilisation de plus d’un tampon On t’entraîne à être minimaliste et précis
 
-✅ Obligatoire :
+###Obligatoire :###
+Autorisé                                                     | Notes
+-------------------------------------------------------------|----------------------------------------------------------
+write(1, ...), ft_putchar, ft_putstr, ft_putnbr maison       | Pour l'affichage
+Un seul int tmp;                                             | Pour stocker temporairement une valeur pendant l’échange
+Pointeurs (*a, *b)                                           | Pour modifier directement la mémoire
 
-✅ Autorisé  📌 Notes
-write(1, ...), ft_putchar, ft_putstr, ft_putnbr maison  Pour l'affichage
-Un seul int tmp;  Pour stocker temporairement une valeur pendant l’échange
-Pointeurs (*a, *b)  Pour modifier directement la mémoire
-
-💬 Bulle d’ami :
+###Bulle d’ami :###
 "Un bon échange commence toujours par cacher une des deux valeurs dans une boîte temporaire."
 
-🧠 Visualisation mémoire (avant/après) :
-
-yaml
-Copier
-Modifier
+###Visualisation mémoire (avant/après) :###
 Avant :
   x = 5    y = 10
 
@@ -2150,11 +2145,10 @@ Avant :
 
 Après ft_swap(&x, &y) :
   x = 10   y = 5
-📁 Arborescence du projet ex10/ :
 
-txt
-Copier
-Modifier
+####Arborescence du projet ex10/ :###
+
+```bash
 ex10/
 ├── include/
 │   ├── ft_swap.h
@@ -2171,22 +2165,22 @@ ex10/
 │   ├── expected.txt
 │   └── test.sh
 └── Makefile
-📦 include/ft_swap.h
+```
 
-c
-Copier
-Modifier
+include/ft_swap.h
+
+```c
 #ifndef FT_SWAP_H
 # define FT_SWAP_H
 
 void ft_swap(int *a, int *b);
 
 #endif
-📦 src/ft_swap.c
+```
 
-c
-Copier
-Modifier
+src/ft_swap.c
+
+```c
 #include "ft_swap.h"
 
 void ft_swap(int *a, int *b)
@@ -2197,22 +2191,22 @@ void ft_swap(int *a, int *b)
     *a = *b;
     *b = tmp;
 }
-📦 include/ft_putstr.h
+```
 
-c
-Copier
-Modifier
+include/ft_putstr.h
+
+```c
 #ifndef FT_PUTSTR_H
 # define FT_PUTSTR_H
 
 void ft_putstr(char *str);
 
 #endif
-📦 src/ft_putstr.c
+```
 
-c
-Copier
-Modifier
+src/ft_putstr.c
+
+```c
 #include <unistd.h>
 #include "ft_putstr.h"
 
@@ -2221,22 +2215,22 @@ void ft_putstr(char *str)
     while (*str)
         write(1, str++, 1);
 }
-📦 include/ft_putchar.h
+```
 
-c
-Copier
-Modifier
+include/ft_putchar.h
+
+```c
 #ifndef FT_PUTCHAR_H
 # define FT_PUTCHAR_H
 
 void ft_putchar(char c);
 
 #endif
-📦 src/ft_putchar.c
+```
 
-c
-Copier
-Modifier
+src/ft_putchar.c
+
+```c
 #include <unistd.h>
 #include "ft_putchar.h"
 
@@ -2244,22 +2238,22 @@ void ft_putchar(char c)
 {
     write(1, &c, 1);
 }
-📦 include/ft_putnbr.h
+```
 
-c
-Copier
-Modifier
+include/ft_putnbr.h
+
+```c
 #ifndef FT_PUTNBR_H
 # define FT_PUTNBR_H
 
 void ft_putnbr(int nb);
 
 #endif
-📦 src/ft_putnbr.c
+```
 
-c
-Copier
-Modifier
+src/ft_putnbr.c
+
+```c
 #include "ft_putchar.h"
 #include "ft_putnbr.h"
 
@@ -2279,11 +2273,12 @@ void ft_putnbr(int nb)
         ft_putnbr(nb / 10);
     ft_putchar(nb % 10 + '0');
 }
-🧪 test/main.c
+```
 
-c
-Copier
-Modifier
+test/main.c
+
+```c
+
 #include "../include/ft_swap.h"
 #include "../include/ft_putstr.h"
 #include "../include/ft_putnbr.h"
@@ -2304,17 +2299,17 @@ int main(void)
 
     return 0;
 }
-📄 test/expected.txt
+```
 
-txt
-Copier
-Modifier
+test/expected.txt
+
+```txt
 a = 10, b = 5
-📄 test/test.sh
+```
 
-bash
-Copier
-Modifier
+test/test.sh
+
+```bash
 #!/bin/bash
 
 cd .. > /dev/null
@@ -2327,12 +2322,12 @@ echo "Résultat obtenu :"
 cat test/output.txt
 echo
 
-diff test/output.txt test/expected.txt && echo "✅ Test OK" || echo "❌ Test FAIL"
-🛠️ Makefile
+diff test/output.txt test/expected.txt && echo "Test OK" || echo "Test FAIL"
+```
 
-makefile
-Copier
-Modifier
+###Makefile :###
+
+```makefile
 NAME = ex10
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
@@ -2351,45 +2346,46 @@ fclean: clean
   rm -f test/output.txt
 
 re: fclean all
-🔬 Reverse Engineering
+```
 
-🧩 nm :
+###Reverse Engineering :###
 
-bash
-Copier
-Modifier
+nm :
+
+```bash
 nm ex10 | grep ft_swap
-🧩 objdump :
+```
 
-bash
-Copier
-Modifier
+objdump :
+
+```bash
 objdump -d ex10 | grep -A20 ft_swap
-📎 Exemple ASM probable (x86_64) :
+```
 
-asm
-Copier
-Modifier
+Exemple ASM probable (x86_64) :
+
+```asm
 ft_swap:
     mov eax, DWORD PTR [rdi]   ; charger *a dans eax
     mov edx, DWORD PTR [rsi]   ; charger *b dans edx
     mov DWORD PTR [rdi], edx   ; *a = b
     mov DWORD PTR [rsi], eax   ; *b = a
     ret
-📌 À retenir
+```
 
-✅ Fait  📋 Description
-Pointeurs maîtrisés Passage d’adresse = modification réelle
-Sécurité mémoire  Pas de fuite, pas de cast, pas de malloc
-Utilité future  Base de tous les tris : bubble sort, quick sort
-Minimalisme Pas de dépendance, pas de return, pas de macro
+À retenir :
 
-🧠 Bonus pour plus tard :
+Fait                                       |Description
+-------------------------------------------|----------------------------
+Pointeurs maîtrisés                        | Passage d’adresse = modification réelle
+Sécurité mémoire                           | Pas de fuite, pas de cast, pas de malloc
+Utilité future                             | Base de tous les tris : bubble sort, quick sort
+Minimalisme                                | Pas de dépendance, pas de return, pas de macro
+
+###Bonus pour plus tard :###
 Créer une fonction générique d’échange :
 
-c
-Copier
-Modifier
+```c
 void swap(void *a, void *b, size_t size)
 {
     unsigned char tmp;
@@ -2400,6 +2396,8 @@ void swap(void *a, void *b, size_t size)
         ((unsigned char *)b)[i] = tmp;
     }
 }
+```
+
 Mais tu l’utiliseras dans des algorithmes génériques (tri, tableaux, structures) plus tard.
 
 -------------------------------------------------
