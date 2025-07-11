@@ -26,7 +26,7 @@ Merci pour votre compréhension 🙏
 
 ## 🧩 À propos de la création du contenu
 
-Tous les exercices, exemples de code, structures de projet, scripts `.sh` ou tests, sont à l’origine **rédigés et proposés par l’assistant ChatGPT** dans le cadre de mon apprentissage.
+Tous les exercices, prototype de code, structures de projet, scripts `.sh` ou tests, sont à l’origine **rédigés et proposés par l’assistant ChatGPT** dans le cadre de mon apprentissage.
 
 Ensuite, **chaque exercice est revu, corrigé, modifié ou réorganisé par moi**, selon :
 
@@ -53,9 +53,6 @@ Il suit une pédagogie rigoureuse et expérimentale, inspirée de l’école 42,
 - Architecture mémoire, gestion manuelle
 - Philosophie logicielle et éthique du code
 - Analyse et scripts `.sh` automatisés
-- Constitution logicielle
-- Projet de ville virtuelle symbolique : **SoftCity**
-- Vision artistique et pédagogique
 
 ---
 
@@ -102,7 +99,7 @@ Le cursus est découpé en **blocs pédagogiques évolutifs**, chacun contenant 
 
 - **Reproduction, modification, diffusion ou commercialisation** interdites sans **autorisation écrite**.
 - Le projet **n’est pas open-source**, ni destiné à un usage collectif.
-- Il s’agit d’un **outil privé, artistique et pédagogique**, publié à titre symbolique, **non terminé** et en évolution permanente.
+- Il s’agit d’un **outil privé, pédagogique**, publié à titre symbolique, **non terminé** et en évolution permanente.
 
 ---
 
