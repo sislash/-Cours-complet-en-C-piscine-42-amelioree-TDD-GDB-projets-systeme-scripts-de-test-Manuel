@@ -312,11 +312,11 @@ gcc -Wall -Wextra -Werror -Iinclude src/ft_success.c test/main.c -o success_test
 
 # Comparaison
 if diff test/output.txt test/expected.txt > /dev/null; then
-    echo -e "${GREEN} ft_success : Test réussi${NC}"
+    echo -e "ft_success : Test réussi${NC}"
     rm -f test/output.txt success_test
     exit 0
 else
-    echo -e "${RED} ft_success : Échec du test${NC}"
+    echo -e "ft_success : Échec du test${NC}"
     echo "Contenu obtenu :"
     cat test/output.txt
     echo "Attendu :"
@@ -404,12 +404,7 @@ void ft_putchar(char c);
 src/ft_putchar.c
 
 ```c
-#include <unistd.h>
-
 void ft_putchar(char c)
-{
-    write(1, &c, 1);
-}
 ```
 
 ###Explication :###
@@ -698,7 +693,7 @@ Compare-le avec un fichier attendu contenant :
 
 `abcdefghijklmnopqrstuvwxyz`
 
-###Exemple de TDD complet :###
+###TDD :###
 1️. Fichier de test (test/main.c)
 
 test/main.c
@@ -712,6 +707,7 @@ int main(void)
   return 0;
 }
 ```
+
 2️. Fichier attendu (test/expected.txt)
 
 abcdefghijklmnopqrstuvwxyz
@@ -798,61 +794,6 @@ Crée un test qui appelle la fonction, redirige la sortie standard dans un fichi
 puis vérifie que ce fichier contient bien :  
 `zyxwvutsrqponmlkjihgfedcba`
 
-###TDD complet :###
-pour ft_print_reverse_alphabet
-1️. Fichier de test (test/main.c)
-
-test/main.c
-```c
-#include "../include/ft_print_reverse_alphabet.h"
-
-int main(void)
-{
-  ft_print_reverse_alphabet();
-  return 0;
-}
-```
-
-2️. Fichier attendu (test/expected.txt)
-
-```txt
-zyxwvutsrqponmlkjihgfedcba
-```
-
-3️. Script de test automatique (test/test.sh)
-
-```bash
-#!/bin/bash
-
-# Compiler
-gcc -Wall -Wextra -Werror -Iinclude src/ft_print_reverse_alphabet.c test/main.c -o ex02_test
-
-# Exécuter et rediriger la sortie
-./ex02_test > test/output.txt
-
-# Comparer
-diff test/output.txt test/expected.txt > /dev/null
-
-# Résultat
-if [ $? -eq 0 ]; then
-    echo "ex02: Test réussi"
-else
-    echo "ex02: Test échoué"
-fi
-
-# Nettoyage
-rm -f ex02_test test/output.txt
-```
-
-###Entrée dans le Makefile principal :###
-Ajoute dans ton Makefile ce qu'il manque pour compiler.
-
-###Tester manuellement :###
-
-```bash
-cd ex02
-./test/test.sh
-```
 
 ###Résumé TDD :###
 Étape Description
@@ -890,48 +831,6 @@ Crée un fichier de test qui appelle `ft_print_numbers()` puis redirige la sorti
 fichier.
 Compare ensuite ce fichier à un `expected.txt` contenant :  
 `0123456789`
-
-###TDD complet :###
-pour ft_print_numbers
-
-2️. Fichier attendu (test/expected.txt)
-
-0123456789
-
-3️. Script de test automatique (test/test.sh)
-
-```bash
-#!/bin/bash
-
-# Compiler
-gcc -Wall -Wextra -Werror -Iinclude src/ft_print_numbers.c test/main.c -o ex03_test
-
-# Exécuter et rediriger la sortie
-./ex03_test > test/output.txt
-
-# Comparer
-diff test/output.txt test/expected.txt > /dev/null
-
-# Résultat
-if [ $? -eq 0 ]; then
-    echo "ex03: Test réussi"
-else
-    echo "ex03: Test échoué"
-fi
-
-# Nettoyage
-rm -f ex03_test test/output.txt
-```
-
-###Entrée dans le Makefile principal :###
-Ajoute dans ton Makefile ce qu'il manque pour compiler.
-
-###Tester manuellement :###
-
-```bash
-cd ex03
-./test/test.sh
-```
 
 ###Résumé TDD :###
 Étape Description
@@ -971,42 +870,6 @@ Crée un programme de test qui appelle ft_is_negative() avec :
 >un nombre négatif → affiche N
 >zéro → affiche P
 >un nombre positif → affiche P
-
-###TDD complet :###
-1️. Fichier de test (test/main.c)
-
-// test/main.c
-```c
-#include "../include/ft_is_negative.h"
-
-int main(void)
-{
-  ft_is_negative(-1);  // Devrait afficher N
-  write(1, "\n", 1);
-  ft_is_negative(0);   // Devrait afficher P
-  write(1, "\n", 1);
-  ft_is_negative(83);  // Devrait afficher P
-  write(1, "\n", 1);
-  return 0;
-}
-```
-2. Fichier attendu (test/expected.txt)
-
-```txt
-N
-P
-P
-```
-
-3️. Script de test automatique (test/test.sh)
-Oublie pas de créer le fichier et l'entrée dans le Makefile principal.
-
-###Exécution du test :###
-
-```bash
-cd ex04
-./test/test.sh
-```
 
 -------------------------------------------------
 ## 0.0.5) ex05: ft_print_comb
@@ -1157,82 +1020,10 @@ Si le nombre est supérieur ou égal à 10, on appelle ft_putnbr(nb / 10), puis 
 ###Mini-TDD :###
 Créer un main() de test pour afficher les valeurs suivantes avec ft_putnbr() :
 
->42
->-42
->0
->-2147483648
-
-###TDD :###
-Fichier de test : test/main.c
-
-```c
-#include "../include/ft_putnbr.h"
-
-int main(void)
-{
-  ft_putnbr(83);
-  ft_putchar('\n');
-  ft_putnbr(-83);
-  ft_putchar('\n');
-  ft_putnbr(0);
-  ft_putchar('\n');
-  ft_putnbr(-2147483648);
-  ft_putchar('\n');
-  return 0;
-}
-```
-
-Fichier : test.sh
-```sh
-diff test/output.txt test/expected.txt && echo "OK" || echo "FAIL" (à tester)
-```
-
-```sh
-#!/bin/bash
-
-# Compilation
-gcc -Wall -Wextra -Werror -Iinclude src/*.c test/main.c -o ex07_test
-
-# Exécution + redirection de sortie
-./../ex07_test > test/output.txt
-
-# Comparaison
-diff test/output.txt test/expected.txt > /dev/null
-
-if [ $? -eq 0 ]; then
-  echo "ex07: Test réussi"
-else
-  echo "ex07: Erreur - La sortie ne correspond pas à expected.txt"
-fi
-
-# Nettoyage
-rm -f ex07_test test/output.txt
-```
-
-Fichier : expected.txt
-
 >83
 >-83
 >0
 >-2147483648
-
-Fichier : Makefile
-
-```Makefile
-SRC_ex07 = ft_putnbr ft_putchar
-
-define compile_exercise
-	@echo "Compiling $1..."
-	$(CC) $(CFLAGS\) -I$1/include $(addprefix $1/src/, $(SRC_$1:=.c)) $1/test/main.c -o $1_test
-endef
-```
-
-###Pour tester :###
-
-```bash
-cd ex07
-./test/test.sh
-```
 
 ###Résumé TDD :###
 Étape Action
@@ -1283,36 +1074,6 @@ Créer un test qui appelle ft_print_combn() avec
 et compare les sorties avec les résultats attendus.
 Utilise diff avec un fichier expected.txt généré manuellement ou par script.
 
-Fichier de test : test/main.c
-
-```c
-#include "../include/ft_print_combn.h"
-
-int main(void)
-{
-  ft_print_combn(2);
-  ft_putchar('\n');
-  ft_print_combn(3);
-  ft_putchar('\n');
-  ft_print_combn(1);
-  ft_putchar('\n');
-  ft_print_combn(4);
-  ft_putchar('\n');
-  ft_print_combn(9);
-  ft_putchar('\n');
-  return 0;
-}
-```
-
-Fichier attendu : test/expected.txt
-
-```txt
-01, 02, 03, ..., 89
-012, 013, ..., 789
-0, 1, ..., 9
-0123, 0124, ..., 6789
-012345678
-```
 -------------------------------------------------
 #Module 1 — preprocessor/ — Fondamentaux du Préprocesseur C#
 -------------------------------------------------
