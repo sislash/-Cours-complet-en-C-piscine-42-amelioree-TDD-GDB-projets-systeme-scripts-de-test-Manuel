@@ -1392,154 +1392,7 @@ void ft_ultimate_ft(int *********nbr);
 src/ft_ultimate_ft.c
 
 ```c
-#include "ft_ultimate_ft.h"
-
 void ft_ultimate_ft(int *********nbr)
-{
-    *********nbr = 42;
-}
-```
-
-include/ft_putnbr.h
-
-```c
-#ifndef FT_PUTNBR_H
-# define FT_PUTNBR_H
-
-void ft_putnbr(int nb);
-
-#endif
-```
-
-src/ft_putnbr.c
-
-```c
-#include <unistd.h>
-#include "ft_putnbr.h"
-
-void ft_putchar(char c)
-{
-    write(1, &c, 1);
-}
-
-void ft_putnbr(int nb)
-{
-    if (nb == -2147483648)
-    {
-        write(1, "-2147483648", 11);
-        return;
-    }
-    if (nb < 0)
-    {
-        ft_putchar('-');
-        nb = -nb;
-    }
-    if (nb >= 10)
-        ft_putnbr(nb / 10);
-    ft_putchar(nb % 10 + '0');
-}
-```
-
-include/ft_putstr.h
-
-```c
-#ifndef FT_PUTSTR_H
-# define FT_PUTSTR_H
-
-void ft_putstr(char *str);
-
-#endif
-```
-
-src/ft_putstr.c
-
-```c
-#include <unistd.h>
-#include "ft_putstr.h"
-
-void ft_putstr(char *str)
-{
-    while (*str)
-        write(1, str++, 1);
-}
-```
-
-test/main.c
-
-```c
-#include "../include/ft_ultimate_ft.h"
-#include "../include/ft_putnbr.h"
-#include "../include/ft_putstr.h"
-#include <unistd.h>
-
-int main(void)
-{
-    int val = 0;
-    int *p1 = &val;
-    int **p2 = &p1;
-    int ***p3 = &p2;
-    int ****p4 = &p3;
-    int *****p5 = &p4;
-    int ******p6 = &p5;
-    int *******p7 = &p6;
-    int ********p8 = &p7;
-    int *********p9 = &p8;
-
-    ft_ultimate_ft(p9);
-
-    ft_putstr("Résultat : ");
-    ft_putnbr(val);
-    write(1, "\n", 1); // Résultat attendu : 42
-
-    return 0;
-}
-```
-
-test/expected.txt
-
-```txt
-42
-```
-
-test/test.sh
-
-```bash
-#!/bin/bash
-
-cd .. > /dev/null
-make > /dev/null
-./ex09 > test/output.txt
-
-echo "Résultat attendu :"
-cat test/expected.txt
-echo "Résultat obtenu :"
-cat test/output.txt
-echo
-
-diff test/output.txt test/expected.txt && echo "Test OK" || echo "Test FAIL"
-```
-
-###Makefile :###
-
-```makefile
-NAME = ex09
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror
-SRC = src/ft_ultimate_ft.c src/ft_putnbr.c src/ft_putstr.c test/main.c
-INC = -Iinclude
-
-all: $(NAME)
-
-$(NAME):
-  $(CC) $(CFLAGS) $(SRC) $(INC) -o $(NAME)
-
-clean:
-  rm -f $(NAME)
-  rm -f test/output.txt
-
-fclean: clean
-
-re: fclean all
 ```
 
 ###Reverse Engineering :###
@@ -1567,7 +1420,7 @@ Pédagogie mémoire Tu explores la pile de manière symbolique
 Bonus Universitaire — Pour aller plus loin
 Ajoute un affichage des adresses mémoire :
 
-exemple avec stdio.h mai interdi donc ici, à faire avec write()
+exemple avec stdio.h mai interdi ici, à faire avec write()
 
 ```c
 #include <stdio.h>
@@ -1800,47 +1653,6 @@ test/expected.txt
 
 ```txt
 a = 10, b = 5
-```
-
-test/test.sh
-
-```bash
-#!/bin/bash
-
-cd .. > /dev/null
-make > /dev/null
-./ex10 > test/output.txt
-
-echo "Résultat attendu :"
-cat test/expected.txt
-echo "Résultat obtenu :"
-cat test/output.txt
-echo
-
-diff test/output.txt test/expected.txt && echo "Test OK" || echo "Test FAIL"
-```
-
-###Makefile :###
-
-```makefile
-NAME = ex10
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror
-SRC = src/ft_swap.c src/ft_putstr.c src/ft_putnbr.c src/ft_putchar.c test/main.c
-INC = -Iinclude
-
-all: $(NAME)
-
-$(NAME):
-  $(CC) $(CFLAGS) $(SRC) $(INC) -o $(NAME)
-
-clean:
-  rm -f $(NAME)
-
-fclean: clean
-  rm -f test/output.txt
-
-re: fclean all
 ```
 
 ###Reverse Engineering :###
